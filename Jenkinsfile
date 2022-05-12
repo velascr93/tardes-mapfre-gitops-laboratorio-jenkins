@@ -9,6 +9,7 @@ pipeline {
                         }
                 
                 stage('Build') {
+                agent { label 'docker-agent' }
                 steps {
                         sh 'echo "Hello World"'
                         sh '''
